@@ -457,5 +457,5 @@ cat = Cat("Cat")
 cat.walk()
 cat.be_annoying()
 
-
-
+rabbit = Rabbit("Rabbit")
+rabbit.walk()
