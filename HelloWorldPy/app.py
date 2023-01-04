@@ -149,3 +149,20 @@ def emoji_converter(msg):
 
 # message = input(">")
 # print(emoji_converter(message))
+
+# roll method tuple immutable value that cannot be change
+# get tuple of two randome values (0, 0)
+
+import random
+
+
+class Dice:
+    def roll(self):
+        first_rand = random.randint(1, 6)
+        second_rand = random.randint(1, 6)
+
+        return (first_rand, second_rand)
+
+dice = Dice()
+print(dice.roll())
+

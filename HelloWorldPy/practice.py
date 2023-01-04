@@ -485,10 +485,21 @@ max_num = find_max(numbers)
 # import ecommerce.shipping
 # from ecommerce.shipping import calc_shipping
 from ecommerce import shipping
-shipping.calc_shipping()
+# shipping.calc_shipping()
 
 
 #-------------------------------------------------------------
 
 # Generating Random Values
+
+import random
+
+# for i in range(3):
+    # print(random.random())
+    # print(random.randint(10, 20))
+
+members = ['Kean', 'Cherry', 'Conan', 'Gudetama']
+leader = random.choice(members)
+# print(leader)
+
 
