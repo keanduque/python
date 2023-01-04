@@ -147,6 +147,5 @@ def emoji_converter(msg):
 
     return output
 
-
-message = input(">")
-print(emoji_converter(message))
+# message = input(">")
+# print(emoji_converter(message))

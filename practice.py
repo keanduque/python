@@ -450,12 +450,45 @@ class Rabbit(Mammal):
     pass
 
 dog = Dog("Dog")
-dog.walk()
-dog.bark()
+#dog.walk()
+#dog.bark()
 
 cat = Cat("Cat")
-cat.walk()
-cat.be_annoying()
+#cat.walk()
+#cat.be_annoying()
 
 rabbit = Rabbit("Rabbit")
-rabbit.walk()
+#rabbit.walk()
+
+#-------------------------------------------------------------
+
+# Modules transfer to converters.py
+# to organize codes break code into multiple files
+import converters
+from converters import kg_to_lbs # specific import modules
+
+kg_to_lbs(100)
+
+# print(converters.kg_to_lbs(70))
+
+# Exercise
+import utils
+from utils import find_max
+
+numbers = [10,3,6,2,27]
+max_num = find_max(numbers)
+# print(max_num)
+# print(find_max([10,3,6,2,27]))
+
+
+# Packages
+# import ecommerce.shipping
+# from ecommerce.shipping import calc_shipping
+from ecommerce import shipping
+shipping.calc_shipping()
+
+
+#-------------------------------------------------------------
+
+# Generating Random Values
+
