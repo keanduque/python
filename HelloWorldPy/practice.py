@@ -500,6 +500,6 @@ import random
 
 members = ['Kean', 'Cherry', 'Conan', 'Gudetama']
 leader = random.choice(members)
-# print(leader)
+print(leader)
 
 
