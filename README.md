@@ -1,6 +1,6 @@
 # python cheat sheet
 
-### Variables ------------------------------------------------------
+### Variables
 
 a = 1       # integer
 b = 1.1     # float
@@ -8,7 +8,7 @@ c = 1 + 2j  # complex number (a + bi)
 d = “a”     # string
 e = True    # boolean (True / False)
 
-### Strings --------------------------------------------------------
+### Strings
 
 x = “Python”
 len(x)
@@ -32,7 +32,7 @@ x.replace(“a”, “b”)
 “a” in x
 
 
-### Type Conversion -------------------------------------------------
+### Type Conversion
  
 int(x)  
 float(x) 
@@ -40,14 +40,14 @@ bool(x)
 string(x)
 
 
-### Falsy Values ----------------------------------------------------
+### Falsy Values
 
 0
 “”
 []
 
 
-### Conditional Statements ------------------------------------------
+### Conditional Statements
 
 if x == 1:  
     print(“a”)
@@ -63,7 +63,7 @@ x = “a” if n > 1 else “b”
 if 18 <= age < 65:
 
 
-### Loops ----------------------------------------------------
+### Loops
 
 for n in range(1, 10): 
     print(n)
@@ -73,7 +73,7 @@ while n < 10:
     n += 1
 
 
-### Functions ----------------------------------------------------
+### Functions
 
 def increment(number, by=1):   
     return number + by
@@ -98,7 +98,7 @@ save_user(id=1, name="Mosh")
 
 
 
-### Lists ----------------------------------------------------
+### Lists
 
 # Creating lists
 letters = ["a", "b", "c"]     
@@ -171,7 +171,7 @@ list2 = [10, 20, 30]
 combined = list(zip(list1, list2))    # [(1, 10), (2, 20)]
 
 
-### Tuples ----------------------------------------------------
+### Tuples
 
 point = (1, 2, 3)
 point(0:2)     # (1, 2)
@@ -185,7 +185,7 @@ y = 11
 x, y = y, x 
 
 
-### Arrays ----------------------------------------------------
+### Arrays
 
 
 from array import array 
@@ -193,7 +193,7 @@ from array import array
 numbers = array("i", [1, 2, 3])
 
 
-### Sets ----------------------------------------------------
+### Sets
 
 first = {1, 2, 3, 4}
 second = {1, 5}
@@ -208,7 +208,7 @@ if 1 in first:
 
 
 
-### Dictionaries ----------------------------------------------------
+### Dictionaries
 
 
 point = {"x": 1, "y": 2}
@@ -225,7 +225,7 @@ for key, value in point.items():
 values = {x: x * 2 for x in range(5)}
 
 
-### Generator Expressions ----------------------------------------------------
+### Generator Expressions 
 
 values = (x * 2 for x in range(10000))
 len(values)  # Error
@@ -233,7 +233,7 @@ for x in values:
 
 
 
-### Unpacking Operator ----------------------------------------------------
+### Unpacking Operator
 
 first = [1, 2, 3]
 second = [4, 5, 6]
@@ -245,11 +245,11 @@ combined = {**first, **second}
 
 
 
-### Exceptions ----------------------------------------------------
+### Exceptions
 
 # Handling Exceptions 
 try: 
-  … 
+  …
 except (ValueError, ZeroDivisionError):
   …
 else: 
@@ -258,57 +258,56 @@ finally:
   # cleanup code 
  
 # Raising exceptions 
-if x < 1:      
+if x < 1: 
     raise ValueError(“…”)
  
 # The with statement 
-with open(“file.txt”) as file:     
+with open(“file.txt”) as file:  
    … 
    
-### Classes ----------------------------------------------------
-
+### Classes 
 
 # Creating classes
 class Point: 
-    def __init__(self, x, y):          
+    def __init__(self, x, y):      
         self.x = x
         self.y = y 
- 
-    def draw(self):          
+
+    def draw(self):      
         …
  
 # Instance vs class attributes
 class Point: 
     default_color = “red”
  
-    def __init__(self, x, y):          
+    def __init__(self, x, y):       
         self.x = x
  
 # Instance vs class methods
 class Point: 
-    def draw(self):         
+    def draw(self):      
         …
      
     @classmethod
-    def zero(cls):          
+    def zero(cls):      
         return cls(0, 0)
  
  
 # Magic methods
 __str__()
- __eq__()
+__eq__()
 __cmp__()
 ... 
  
 # Private members 
 class Point: 
-    def __init__(self, x):          
+    def __init__(self, x):      
         self.__x = x
  
  
 # Properties 
 class Point: 
-    def __init__(self, x):          
+    def __init__(self, x):        
         self.__x = x
  
     @property
@@ -317,11 +316,11 @@ class Point:
  
     @property.setter:
     def x.setter(self, value): 
-        self.__x = value  
+        self.__x = value
  
 # Inheritance
 class FileStream(Stream): 
-    def open(self):         
+    def open(self):      
          super().open()
          … 
  
@@ -342,12 +341,4 @@ from collections import namedtuple
  
 Point = namedtuple(“Point”, [“x”, “y”])
 point = Point(x=1, y=2)
-
-
-
-
-
-
-
-
 
