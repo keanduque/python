@@ -28,7 +28,7 @@
 # weight_kg = float(weight_lbs) * 0.453
 # print("your weight in (KG) is : " + str(weight_kg))
 
-#-------------------------------------------------------------
+# -------------------------------------------------------------
 
 text = ''' 
 Hi John,
@@ -100,7 +100,7 @@ course = 'Python for Beginners'
 # print(math.ceil((2.9))) #3
 # print(math.floor(2.9)) #2
 
-#-------------------------------------------------------------
+# -------------------------------------------------------------
 
 # IF ELSE CONDITIONS
 is_hot = False
@@ -149,7 +149,7 @@ temperature = 30
 # else:
 #     print(f'name looks good {name_input}')
 
-#-------------------------------------------------------------
+# -------------------------------------------------------------
 
 # While loop
 
@@ -205,7 +205,7 @@ guess_count = 1
 #         output += 'y'
 #     print(output)
 
-#-------------------------------------------------------------
+# -------------------------------------------------------------
 
 # *****List
 
@@ -272,7 +272,7 @@ matrix = [
 #     num1 = num2
 #     num2 = fn
 
-#-------------------------------------------------------------
+# -------------------------------------------------------------
 # ***Tuples - same as list but its immutable
 # numbers = (1,2,3)
 # print(numbers[0])
@@ -281,11 +281,11 @@ matrix = [
 # ***Unpacking
 coordinates = (1, 2, 3)
 
-x = coordinates[0]
-y = coordinates[1]
-z = coordinates[2]
+# x = coordinates[0]
+# y = coordinates[1]
+# z = coordinates[2]
 
-x, y, z = coordinates   # same at the x y z line shorthand
+# x, y, z = coordinates   # same at the x y z line shorthand
 # print(y) # 2
 
 # ***Dictionaries key value pairs
@@ -344,7 +344,8 @@ x, y, z = coordinates   # same at the x y z line shorthand
 # print(out)
 #
 
-#-------------------------------------------------------------
+
+# -------------------------------------------------------------
 # **** FUNCTIONS and Parameters
 # define a function
 def greet_user(first_name, last_name):
@@ -356,11 +357,12 @@ def greet_user(first_name, last_name):
 # this can be use after the positional arguments not before the keyword
 # ex: greet_user(first_name="John", "Smith") *** this will throw error
 #     greet_user("John",last_name="Smith")       correct usage
-def greet_user(first_name, last_name):
-    print(f"hi there {first_name} {last_name}")
+# def greet_user(first_name, last_name):
+#     print(f"hi there {first_name} {last_name}")
 # greet_user(first_name="John",last_name="Smith") # positional arguments
 # greet_user(last_name="SmithX", first_name="Johnkeyword") # keyword arguments
 # calc_cost(total=50, shipping=5, discount=0.1) #keyword args
+
 
 # all funtion in python return None
 # Return statement
@@ -381,22 +383,26 @@ def square(number):
 #     print("Invalid value")
 #
 
-#-------------------------------------------------------------
+
+# -------------------------------------------------------------
 # Classes
 class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-    def move(self):
+
+    @staticmethod
+    def move():
         print("move")
 
-    def draw(self):
+    @staticmethod
+    def draw():
         print("draw")
 
 # *****Instance
 # point1 = Point()
 # point1.move()
-### attributes
+# ## attributes
 # point1.x = 10
 # point1.y = 20
 # print(point1.x)
@@ -405,20 +411,23 @@ class Point:
 # point2 = Point()
 # point2.move()
 
-### attributes
+# ## attributes
 # point2.x = 1
 # print(point2.x)
+
 
 # *****Constructor
 point = Point(10, 20)
 # print(point.x)
 # print(point.y)
 
+
 # Exercise for Class Constructor
 
 class Person:
     def __init__(self, name):
         self.name = name
+
     def talk(self):
         print(f"hello im {self.name}")
 
@@ -434,72 +443,109 @@ person2 = Person("Cherry Quilates")
 class Mammal:
     def __init__(self, name):
         self.name = name
+
     def walk(self):
         print(f"walking {self.name}")
 
+
 # python dont want empty class
 class Dog(Mammal):
-    def bark(self):
+    @staticmethod
+    def bark():
         print("bark")
-    #pass  # for empty class use if classes dont have method
+    # pass  # for empty class use if classes dont have method
+
 
 class Cat(Mammal):
-    def be_annoying(self):
+    @staticmethod
+    def be_annoying():
         print("annoying")
+
+
 class Rabbit(Mammal):
     pass
 
+
 dog = Dog("Dog")
-#dog.walk()
-#dog.bark()
+# dog.walk()
+# dog.bark()
 
 cat = Cat("Cat")
-#cat.walk()
-#cat.be_annoying()
+# cat.walk()
+# cat.be_annoying()
 
 rabbit = Rabbit("Rabbit")
-#rabbit.walk()
+# rabbit.walk()
 
-#-------------------------------------------------------------
+# -------------------------------------------------------------
 
 # Modules transfer to converters.py
 # to organize codes break code into multiple files
-import converters
-from converters import kg_to_lbs # specific import modules
+# import converters
+from converters import kg_to_lbs  # specific import modules
+
 
 kg_to_lbs(100)
 
 # print(converters.kg_to_lbs(70))
 
 # Exercise
-import utils
+# import utils
 from utils import find_max
 
-numbers = [10,3,6,2,27]
+numbers = [10, 3, 6, 2, 27]
 max_num = find_max(numbers)
 # print(max_num)
 # print(find_max([10,3,6,2,27]))
 
 
-# Packages
+# ##Packages
 # import ecommerce.shipping
 # from ecommerce.shipping import calc_shipping
-from ecommerce import shipping
+# from ecommerce import shipping
 # shipping.calc_shipping()
 
 
-#-------------------------------------------------------------
+# -------------------------------------------------------------
 
 # Generating Random Values
 
 import random
 
 # for i in range(3):
-    # print(random.random())
-    # print(random.randint(10, 20))
+# print(random.random())
+# print(random.randint(10, 20))
 
 members = ['Kean', 'Cherry', 'Conan', 'Gudetama']
 leader = random.choice(members)
-print(leader)
+# print(leader)
 
+# -------------------------------------------------------------
+
+
+# Working with Directories
+from pathlib import Path
+
+# Absolute path   - start root of the hard disk.
+# ex c:\Program Files\Microsoft
+# /usr/local/bin
+# Relative path   - current dir to go somewhere else
+
+# path = Path("ecommerce")
+path = Path()
+# print(path.exists())  # True
+# path = Path("email")
+# print(path.mkdir())
+# print(path.rmdir())
+
+for file in path.glob('*.py'):  # search file using pattern <generator object Path.glob at 0x10aad3ef0>
+    print(file)
+
+# -------------------------------------------------------------
+
+
+# Pypi and Pip - Python Package Index
+# https://pypi.org/
+
+# pip install openpyxl - done
 
