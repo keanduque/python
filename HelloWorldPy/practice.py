@@ -1,3 +1,7 @@
+"""
+Practice Code and Notes
+"""
+
 # print('Hello World Python')
 # print('*' * 10)
 
@@ -491,12 +495,12 @@ kg_to_lbs(100)
 
 # Exercise
 # import utils
-from utils import find_max
+from utils import find_largest_number
 
 numbers = [10, 3, 6, 2, 27]
-max_num = find_max(numbers)
+max_num = find_largest_number(numbers)
 # print(max_num)
-# print(find_max([10,3,6,2,27]))
+# print(find_largest_number([10,3,6,2,27]))
 
 
 # ##Packages
@@ -535,6 +539,7 @@ from pathlib import Path
 path = Path()
 # print(path.exists())  # True
 # path = Path("email")
+# path = Path("email")
 # print(path.mkdir())
 # print(path.rmdir())
 
@@ -543,9 +548,66 @@ for file in path.glob('*.py'):  # search file using pattern <generator object Pa
 
 # -------------------------------------------------------------
 
-
-# Pypi and Pip - Python Package Index
+"""
+Pypi and Pip - Python Package Index
 # https://pypi.org/
 
 # pip install openpyxl - done
+"""
+
+# -------------------------------------------------------------
+
+# Project1 Automation Excel File
+import openpyxl as xl
+
+wb = xl.load_workbook('transactions.xlsx')
+sheet = wb['Sheet1']
+
+cell = sheet['a1']
+cell = sheet.cell(1, 1)
+# print(cell)  # <Cell 'Sheet1'.A1>
+# print(cell.value)  # transaction_id
+# print(sheet.max_row)  # 4
+
+
+# -------------------------------------------------------------
+"""
+Machine Learning is subset of AI
+- technique of complex problems example scanning dog cats images
+- build model or engines and input lots of data based on the problems you want to solve
+examples : Self-driving cars, robotics, language processing, vision processing, forecasting,
+stock market trends and weather and games and so on.
+
+Steps :
+1. Import the Data
+2. Clean the Data
+3. Split the data into Training/Test Sets
+4. Create a Model ex. Decision trees, Linear, Random Forest etc.
+5. Train the Model
+6. Make Predictions
+7. Evaluate and Improve
+
+Libraries & Tools
+- Numpy        - provides multidimensional array
+- Pandas       - data analysis lib provide concept called data frame. 2 dimensional similar to an excel spreadsheets
+- MatPlotLib   - 2 dimensional plotting libs for creating graphs and paths
+- Scikit-Learn - most popular provides all common algo like decision tress, neural networks
+
+Tools : 
+https://jupyter.org/ for Machine Learning Project - environment for writing code
+- inspecting data
+platform : 
+install : https://www.anaconda.com/
+dataset : https://kaggle.com   
+
+go to terminal and enter : jupyter notebook
+it will open : http://localhost:8888/tree on browser
+if theres error : use jupyter nbclassic
+
+"""
+
+
+
+
+
 
