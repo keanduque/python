@@ -675,3 +675,19 @@ if theres error : use jupyter nbclassic
 Django Intro : https://www.djangoproject.com/
 """
 
+# pip install Django==4.1.5
+# django-admin startproject pyshop . - after installing django
+# python3 manage.py runserver 
+
+# NOTE: everytime you have changes on the models you need to run makemigrations
+# python3 manage.py makemigrations - before do this make sure to add the apps function in the settings.
+# python3 manage.py migrate - to authenticate db  Apply all migrations: admin, auth, contenttypes, products, sessions
+
+# ADMIN credentials
+# python3 manage.py createsuperuser   
+# admin / 1234
+
+
+
+
+
