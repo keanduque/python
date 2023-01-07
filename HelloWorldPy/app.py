@@ -52,10 +52,10 @@ def process_workbook(filename):
         corrected_price_cell.value = corrected_price
 
     values = Reference(sheet,
-              min_row=2,                # start at Row 2
-              max_row=sheet.max_row,    # max row is 4
-              min_col=4,                # column D2
-              max_col=4)                # column D4
+                       min_row=2,                # start at Row 2
+                       max_row=sheet.max_row,    # max row is 4
+                       min_col=4,                # column D2
+                       max_col=4)                # column D4
 
     chart = BarChart()
     chart.add_data(values)
@@ -93,7 +93,7 @@ def fizz_buzz(num):
 # 0speed: The car Stop
 # 1 - 70speed : OK
 # >= 75speed - every 5km speed limit Demerit Points + 1
-# 130 speed which is 12 demerit : License Suspened
+# 130 speed which is 12 demerit : License Suspended
 def check_speed(speed):
     speed_limit = 70
     output = ""
@@ -171,22 +171,13 @@ samples :
 14 - 1,2,7,14       composite
 15 - 1,3,5,15       composite
 18 - 1,2,3,6,9,18   composite
-19 - 1,19
-20 - 1,2,4,5,20
-21 - 
-22 - 
 23 - 1,23           prime
-24 - 
-25
-26
-27
-28
 29 - 1,29           prime
 
 """
 
 
-# Get all prime numbers
+# Get all Prime Numbers
 def prime_numbers(num):
     count = 0
     prime = []
@@ -201,5 +192,3 @@ def prime_numbers(num):
 
 
 prime_numbers(100)
-
-
