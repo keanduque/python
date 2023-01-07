@@ -598,16 +598,80 @@ https://jupyter.org/ for Machine Learning Project - environment for writing code
 - inspecting data
 platform : 
 install : https://www.anaconda.com/
-dataset : https://kaggle.com   
+dataset : https://www.kaggle.com/datasets/gregorut/videogamesales?select=vgsales.csv
 
 go to terminal and enter : jupyter notebook
 it will open : http://localhost:8888/tree on browser
 if theres error : use jupyter nbclassic
 
 """
+# using Jupyter notebook :
+# http://localhost:8888/notebooks/Desktop/HelloWorld.ipynb
+# import pandas as pd
+# df = pd.read_csv('vgsales.csv')
+# df - dataframe
+# df.describe()
+# df.values
+# keyboard shortcut : H
 
 
+# music.csv
 
+# import pandas as pd
+# from sklearn.tree import DecisionTreeClassifier
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import accuracy_score
+#
+# music_data = pd.read_csv('music.csv')
+# X = music_data.drop(columns=['genre'])
+# y = music_data['genre']
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+#
+# model = DecisionTreeClassifier()
+# model.fit(X_train, y_train)
+# predictions = model.predict(X_test)
+#
+# score = accuracy_score(y_test, predictions)
+# score
 
+#====
+# import pandas as pd
+# from sklearn.tree import DecisionTreeClassifier
+# import joblib
+#
+# # music_data = pd.read_csv('music.csv')
+# # X = music_data.drop(columns=['genre'])
+# # y = music_data['genre']
+#
+# # model = DecisionTreeClassifier()
+# # model.fit(X.values, y)
+#
+# model = joblib.load('music-recommender.joblib')
+# predictions = model.predict([[21, 1]])
+# predictions
 
+# Decision Trees
+
+# Generate .dot file display graph files
+# import pandas as pd
+# from sklearn.tree import DecisionTreeClassifier
+# from sklearn import tree
+#
+# music_data = pd.read_csv('music.csv')
+# X = music_data.drop(columns=['genre'])
+# y = music_data['genre']
+#
+# model = DecisionTreeClassifier()
+# model.fit(X.values, y)
+#
+# tree.export_graphviz(model, out_file='music-recommender.dot',
+#                     feature_names=['age', 'gender'],
+#                     class_names=sorted(y.unique()),
+#                     label='all',
+#                     rounded=True,
+#                     filled=True)
+
+"""
+Django Intro : https://www.djangoproject.com/
+"""
 
