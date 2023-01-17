@@ -217,12 +217,26 @@ guess_count = 1
 
 # Find the largest Number
 # numbers = [2,4,5,7,1,2,10,23,27,8,3]
-
+#
 # large_number = numbers[0]
 # for x in numbers:
 #     if x > large_number:
 #         large_number = x
+#         print(large_number)
 # print(large_number)
+#
+# x   ln
+# 2 > 2    false
+# 4 > 2    true = ln = 4
+# 5 > 4    true = ln = 5
+# 7 > 5    true = ln = 7
+# 1 > 7    false =ln = 7
+# 2 > 7    false =ln = 7
+# 10 > 7   true  =ln = 10
+# 23 > 10  true  =ln = 23
+# 27 > 23  true  =ln = 27
+# 27 > 8   false =ln = 27
+# 27 > 3   true  =ln = 27
 
 # 2D List
 
@@ -489,7 +503,7 @@ rabbit = Rabbit("Rabbit")
 from converters import kg_to_lbs  # specific import modules
 
 
-kg_to_lbs(100)
+#kg_to_lbs(100)
 
 # print(converters.kg_to_lbs(70))
 
@@ -498,7 +512,7 @@ kg_to_lbs(100)
 from utils import find_largest_number
 
 numbers = [10, 3, 6, 2, 27]
-max_num = find_largest_number(numbers)
+#max_num = find_largest_number(numbers)
 # print(max_num)
 # print(find_largest_number([10,3,6,2,27]))
 
@@ -543,8 +557,8 @@ path = Path()
 # print(path.mkdir())
 # print(path.rmdir())
 
-for file in path.glob('*.py'):  # search file using pattern <generator object Path.glob at 0x10aad3ef0>
-    print(file)
+# for file in path.glob('*.py'):  # search file using pattern <generator object Path.glob at 0x10aad3ef0>
+#     print(file)
 
 # -------------------------------------------------------------
 
@@ -686,8 +700,5 @@ Django Intro : https://www.djangoproject.com/
 # ADMIN credentials
 # python3 manage.py createsuperuser   
 # admin / 1234
-
-
-
 
 
